@@ -1,0 +1,62 @@
+{
+	"pack": {
+		"pack_format": 61,
+		"description": ""
+	},
+	"filter": {
+		"block": [
+			{
+				"namespace": "minecraft",
+				"path": "advancement"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "banner_pattern"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "chat_type"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "datapacks"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "enchantment"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "enchantment_provider"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "instrument"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "jukebox_song"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "loot_table"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "recipe"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "trial_spawner"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "trim_material"
+			},
+			{
+				"namespace": "minecraft",
+				"path": "trim_pattern"
+			}
+		]
+	}
+}

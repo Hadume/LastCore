@@ -1,0 +1,83 @@
+{
+	"files.associations": {
+		"*.mcmeta": "json"
+	},
+	"mcdutil.createFile.fileTemplate": {
+		"function": [
+			"#> %fileResourcePath%",
+			"# %cursor%",
+			"# @within %nowOpenFileType% %nowOpenFileResourcePath%",
+			"",
+			"##",
+			""
+		],
+		"advancement": [
+			"{",
+			"    \"criteria\": {",
+			"        \"\": {",
+			"            \"trigger\": \"%cursor%\"",
+			"        }",
+			"    }",
+			"}"
+		],
+		"predicate": [
+			"{",
+			"    \"condition\": \"%cursor%\"",
+			"}"
+		],
+		"tag/block": [
+			"{",
+			"    \"values\": [",
+			"        %cursor%",
+			"    ]",
+			"}"
+		],
+		"tag/entity_type": [
+			"{",
+			"    \"values\": [",
+			"        %cursor%",
+			"    ]",
+			"}"
+		],
+		"tag/fluid": [
+			"{",
+			"    \"values\": [",
+			"        %cursor%",
+			"    ]",
+			"}"
+		],
+		"tag/function": [
+			"{",
+			"    \"values\": [",
+			"        %cursor%",
+			"    ]",
+			"}"
+		],
+		"tag/item": [
+			"{",
+			"    \"values\": [",
+			"        %cursor%",
+			"    ]",
+			"}"
+		],
+		"loot_table": [
+			"{",
+			"    \"pools\": [",
+			"        {",
+			"            \"rolls\": 1.0,",
+			"            \"entries\": [",
+			"                %cursor%",
+			"            ]",
+			"        }",
+			"    ]",
+			"}"
+		],
+	},
+	"mcdutil.createDatapackTemplate.defaultFolder": false,
+	"mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
+	"mcdutil.createDatapackTemplate.defaultVanillaData": false,
+	"[mcfunction]": {
+		"editor.defaultFormatter": "ChenCMD.mc-datapack-utility"
+	},
+	"workbench.iconTheme": "mc-dp-icons"
+}
