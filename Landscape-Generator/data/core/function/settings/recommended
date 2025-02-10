@@ -1,0 +1,57 @@
+
+# Map for mini game
+kill @e[type=marker]
+scoreboard players reset *
+
+##Storage
+data modify storage landscape: Height set value 1500d
+data modify storage landscape: Subdivision set value [17600d,17600d]
+data modify storage landscape: Generalization set value 1000d
+data modify storage landscape: GeneralizedLength set value 2000d
+
+ #Initialization
+    data modify storage landscape: GenerateStartPoint set value [0d,0d]
+    data modify storage landscape: GeneralizedPosX set value 0d
+    data modify storage landscape: GeneralizedPosZ set value 0d
+    data modify storage landscape: GeneralizedDistR set value 0d
+    data modify storage landscape: ListGDR set value [0d,0d,0d,0d]
+    data modify storage landscape: STG set value [0d,0d]
+    data modify storage landscape: STGL set value [0d,0d]
+    data modify storage landscape: Calculated.PosX set value 0d
+    data modify storage landscape: Calculated.PosY set value 0d
+    data modify storage landscape: Calculated.PosZ set value 0d
+    data modify storage landscape: WarpTo.PosX set value 0
+    data modify storage landscape: WarpTo.PosY set value 0
+    data modify storage landscape: WarpTo.PosZ set value 0
+    data modify storage landscape: Mix set value 18
+    data modify storage landscape: InsertFromY set value 0
+    data modify storage landscape: RepeatingTimesX set value 4
+    data modify storage landscape: RepeatingTimesZ set value 4
+    data modify storage landscape: RandMin set value -25
+    data modify storage landscape: RandMax set value 25
+    data modify storage landscape: Adjust set value 2
+    data remove storage landscape: SetBlock.PosX
+    data remove storage landscape: SetBlock.PosY
+    data remove storage landscape: SetBlock.PosZ
+
+#Add
+scoreboard objectives add LDC.Peremen dummy
+scoreboard objectives add LDC.Postoy dummy
+
+
+
+##Set
+ #Initialization
+    scoreboard players set #LDC.Gen.Pos.Count.X LDC.Peremen 0
+    scoreboard players set #LDC.Gen.Pos.Count.Z LDC.Peremen 0
+    scoreboard players set #LDC.Gen.STGL.X LDC.Peremen 0
+    scoreboard players set #LDC.Gen.STGL.Z LDC.Peremen 0
+    scoreboard players set #LDC.Gen.Pos.Count.X.0 LDC.Peremen 0
+    scoreboard players set #LDC.Gen.Pos.Count.Z.0 LDC.Peremen 0
+
+ #Postoy
+    scoreboard players set #LDC.Postoy.-1 LDC.Postoy -1
+    scoreboard players set #LDC.Postoy.10^1 LDC.Postoy 10
+    scoreboard players set #LDC.Postoy.10^2 LDC.Postoy 100
+    scoreboard players set #LDC.Postoy.10^3 LDC.Postoy 1000
+    scoreboard players set #LDC.Postoy.137 LDC.Postoy 137
