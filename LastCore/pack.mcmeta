@@ -15,10 +15,6 @@
 			},
 			{
 				"namespace": "minecraft",
-				"path": "chat_type"
-			},
-			{
-				"namespace": "minecraft",
 				"path": "datapacks"
 			},
 			{
