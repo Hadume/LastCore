@@ -12,8 +12,8 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-execute store result score #_ ScoreToHealth run attribute @s max_health get 100
-execute store result score #__ ScoreToHealth run data get entity @s Health 100
-scoreboard players operation #__ ScoreToHealth -= #_ ScoreToHealth
+execute store result score # ScoreToHealth run attribute @s max_health get 100
+execute store result score #0 ScoreToHealth run data get entity @s Health 100
+scoreboard players operation #0 ScoreToHealth -= # ScoreToHealth
 
-execute if score #__ ScoreToHealth matches ..0 run function score_to_health:modify
+execute if score #0 ScoreToHealth matches ..0 run function score_to_health:modify
