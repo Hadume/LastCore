@@ -1,0 +1,7 @@
+{
+    "criteria": {
+        "": {
+            "trigger": "entity_hurt_player"
+        }
+    }
+}
