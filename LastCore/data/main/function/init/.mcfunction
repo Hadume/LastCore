@@ -9,8 +9,11 @@
 	scoreboard objectives add Global dummy
 	scoreboard objectives add Const dummy
 	scoreboard objectives add Temp dummy
-	### Status
-		scoreboard objectives add HP dummy
+	scoreboard objectives add IW.Peremen dummy
+	scoreboard objectives add IW.Player.Storage dummy
+
+### Status
+	scoreboard objectives add HP dummy
 
 #> Constant
 	scoreboard players set #200 Const 200
@@ -21,3 +24,27 @@
 
 ## Gamerule
 	function main:init/gamerule
+
+## Storage
+	# Player List
+		function main:init/player_list
+
+	# Trigons
+		function main:init/trigonometric_func
+		#Pi
+		data modify storage trfc: pi set value 31415
+		#初期化
+		data modify storage iw: Player.Rotation.X set value 0d
+		data modify storage iw: Player.Rotation.Y set value 0d
+		data modify storage iw: Player.Cos set value 0d
+		data modify storage iw: Player.Sin set value 0d
+		data modify storage iw: Player.FaceTo.X set value 0d
+		data modify storage iw: Player.FaceTo.Y set value 0d
+		data modify storage iw: Player.FaceTo.Z set value 0d
+
+
+## Player Storage Num 初期化
+	scoreboard players set #IW.Player.Storage.Num IW.Player.Storage -1
+
+## Item List
+	function main:init/item_list
