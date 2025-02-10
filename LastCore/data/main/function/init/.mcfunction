@@ -13,11 +13,20 @@
 		scoreboard objectives add HP dummy
 
 #> Constant
+	scoreboard players set #4 Const 4
 	scoreboard players set #200 Const 200
 
 #> Bossbar
-	bossbar add lc_main: ""
-	bossbar set lc_main: style notched_10
+	bossbar add lc: ""
+	bossbar set lc: style notched_10
+
+#> Team
+	### Player
+		team add Player
+
+	### Core
+		team add Core
+
 
 ## Gamerule
 	function main:init/gamerule
