@@ -1,0 +1,40 @@
+{
+    "pools": [
+        {
+            "rolls": 1.0,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "stone_sword",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {
+                                "text": "剣",
+                                "color": "yellow",
+                                "italic": false,
+                                "bold": true
+                            }
+                        },
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "unbreakable": {
+                                    "show_in_tooltip": false
+                                },
+                                "attribute_modifiers": {
+                                    "modifiers": [],
+                                    "show_in_tooltip": false
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_custom_data",
+                            "tag": "{Weapon:1b,Sword:1b}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
