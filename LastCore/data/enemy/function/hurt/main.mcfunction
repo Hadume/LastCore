@@ -3,7 +3,7 @@
 # @within function enemy:hurt/
 
 ## 体力を減らす
-	scoreboard players remove @s HP 1
+#scoreboard players remove @s HP 1
 
 ## ターゲットをプレイヤーに向ける
 	execute if entity @s[team=Player] run team join Core @s

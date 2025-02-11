@@ -8,10 +8,11 @@
 	scoreboard players operation #Rand Temp %= #4 Const
 
 ## スポーン
-	execute if score #Rand Temp matches 0 positioned -7 -100 -7 summon zombie run function main:phase/spawn.enemy/main
-	execute if score #Rand Temp matches 1 positioned -7 -100 23 summon zombie run function main:phase/spawn.enemy/main
-	execute if score #Rand Temp matches 2 positioned 23 -100 -7 summon zombie run function main:phase/spawn.enemy/main
-	execute if score #Rand Temp matches 3 positioned 23 -100 23 summon zombie run function main:phase/spawn.enemy/main
+	execute if score #Rand Temp matches 0 positioned -7 -60 -7 summon zombie run function main:phase/spawn.enemy/main
+	execute if score #Rand Temp matches 1 positioned -7 -60 23 summon zombie run function main:phase/spawn.enemy/main
+	execute if score #Rand Temp matches 2 positioned 23 -60 -7 summon zombie run function main:phase/spawn.enemy/main
+	execute if score #Rand Temp matches 3 positioned 23 -60 23 summon zombie run function main:phase/spawn.enemy/main
+
 
 ## スコアを減らす
 	scoreboard players remove #Phase Temp 1

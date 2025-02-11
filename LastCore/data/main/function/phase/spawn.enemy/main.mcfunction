@@ -9,7 +9,7 @@
 ## データを変更
 	data merge entity @s {Health:2048.0f,PersistenceRequired:1b,HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}
 
-## 移動
+## 移動 (OK)
 	execute positioned over world_surface run tp @s ~ ~ ~
 
 ## 装備を与える
