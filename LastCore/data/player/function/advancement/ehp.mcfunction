@@ -7,10 +7,10 @@
 
 ## 体力の表示を更新
 	execute if entity @s[scores={HP=..0}] run kill @s
-	execute if entity @s[scores={HP=..0}] run scoreboard players set @s HP 10
+	execute if entity @s[scores={HP=..0}] run scoreboard players operation @s HP = @s HP.Max
 
 ## 体力の表示を更新
-	function player:update.health_display
+	function #lib:status/hp/update
 
 ## 進捗を剥奪
 	advancement revoke @s only player:ehp

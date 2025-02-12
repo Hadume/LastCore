@@ -6,8 +6,7 @@
 #execute positioned 0 0 0 positioned over world_surface run tp @s ~ ~ ~ 0.0 0.0
 
 ## ステータス
-	scoreboard players set @s HP 10
-
+	scoreboard players operation @s HP = @s HP.Max
 
 ## ボスバーを表示
 	bossbar set lc: players @s

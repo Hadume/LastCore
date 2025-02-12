@@ -9,4 +9,4 @@
 	scoreboard players reset @s HP
 
 ## 体力表示を更新
-	function player:update.health_display
+	function #lib:status/hp/update
