@@ -31,6 +31,17 @@
 		team add Core
 
 
+## 位置関係
+	### コア
+		summon marker 8 0 8 {Tags:["Core"]}
+
+	### Enemy
+		summon marker -7 0 -7 {Tags:["Enemy"]}
+		summon marker -7 0 23 {Tags:["Enemy"]}
+		summon marker 23 0 -7 {Tags:["Enemy"]}
+		summon marker 23 0 23 {Tags:["Enemy"]}
+
+
 ## Gamerule
 	function main:init/gamerule
 
