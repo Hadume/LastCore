@@ -3,7 +3,7 @@
 # @within function main:load
 
 ## 初期化完了
-#data modify storage lc: Init set value 1b
+	data modify storage lc: Init set value 1b
 
 #> Scoreboard
 	scoreboard objectives add Global dummy
@@ -14,10 +14,12 @@
 
 ### Status
 	scoreboard objectives add HP dummy
+	scoreboard objectives add HP.Max dummy
+	scoreboard objectives add ATK dummy
 
 #> Constant
 	scoreboard players set #4 Const 4
-	scoreboard players set #200 Const 200
+	scoreboard players set #2000 Const 2000
 
 #> Bossbar
 	bossbar add lc: ""

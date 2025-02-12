@@ -1,7 +1,7 @@
-#> main:reset/
+#> main:reset
 # ゲームリセット
 # @within
-#   function main:start/
+#   function main:start
 #   tag/function main:reset
 
 ## オブジェクトを消す
