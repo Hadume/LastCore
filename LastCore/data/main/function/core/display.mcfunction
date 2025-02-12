@@ -6,7 +6,7 @@
 	execute store result bossbar lc: value run scoreboard players get #Core Global
 
 ## 敵の数を取得
-	execute store result score #Enemy Temp if entity @e[tag=Enemy]
+	execute store result score #Enemy Temp if entity @e[type=#main:living,tag=Enemy]
 
 ## 割合によって、色を変える
 	execute if score #Core Global matches 6..10 run bossbar set lc: color green

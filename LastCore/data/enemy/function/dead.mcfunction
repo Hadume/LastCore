@@ -1,6 +1,8 @@
 #> enemy:dead
 # 敵が死んだら
-# @within function enemy:hurt
+# @within function
+#   enemy:hurt/main
+#   enemy:tick
 
 ## 消す
 	function main:remove.entity
