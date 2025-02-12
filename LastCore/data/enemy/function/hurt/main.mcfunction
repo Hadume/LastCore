@@ -10,6 +10,3 @@
 
 ## 体力の更新
 	function #lib:status/hp/update
-
-## 死
-	execute if entity @s[scores={HP=..0}] at @s run return run function enemy:dead

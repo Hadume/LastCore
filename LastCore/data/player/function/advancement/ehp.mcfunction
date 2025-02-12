@@ -6,10 +6,6 @@
 	scoreboard players remove @s HP 1
 
 ## 体力の表示を更新
-	execute if entity @s[scores={HP=..0}] run kill @s
-	execute if entity @s[scores={HP=..0}] run scoreboard players operation @s HP = @s HP.Max
-
-## 体力の表示を更新
 	function #lib:status/hp/update
 
 ## 進捗を剥奪

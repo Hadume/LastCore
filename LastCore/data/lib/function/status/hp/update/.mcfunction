@@ -10,7 +10,7 @@
 	scoreboard players operation #HP Temp = @s HP
 
 ## 体力が0以下だったら
-#execute if score #HP Temp matches ..0 run function #lib:die
+	execute if score #HP Temp matches ..0 run function #lib:death
 
 ## 体力が1以上だったら
 	execute if score #HP Temp matches 1.. run function lib:status/hp/update/main/

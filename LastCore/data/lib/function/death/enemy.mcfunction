@@ -1,8 +1,6 @@
-#> enemy:dead
-# 敵が死んだら
-# @within function
-#   enemy:hurt/main
-#   enemy:tick
+#> lib:death/enemy
+# 敵の死亡時の処理
+# @within function lib:death/
 
 ## 消す
 	function main:remove.entity
