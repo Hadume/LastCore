@@ -1,6 +1,6 @@
-#> main:advancement/entity_hurt_player
+#> player:advancement/ehp
 # Entityがプレイヤーを攻撃したら
-# @within function main:tick/player
+# @within function player:tick
 
 ## 体力を減らす
 	scoreboard players remove @s HP 1
@@ -13,4 +13,4 @@
 	function player:update.health_display
 
 ## 進捗を剥奪
-	advancement revoke @s only main:entity_hurt_player
+	advancement revoke @s only player:ehp

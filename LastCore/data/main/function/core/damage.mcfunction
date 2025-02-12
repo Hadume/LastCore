@@ -1,6 +1,6 @@
 #> main:core/damage
 # コアがダメージを受ける
-# @within function main:tick/
+# @within function main:tick
 
 ## コアの体力を減らす
 	scoreboard players remove #Core Global 1
