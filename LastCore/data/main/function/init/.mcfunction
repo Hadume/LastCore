@@ -20,6 +20,9 @@
 #> Constant
 	scoreboard players set #4 Const 4
 	scoreboard players set #2000 Const 2000
+	### Gameplay
+		scoreboard players set #Core Const 10
+
 
 #> Bossbar
 	bossbar add lc: ""

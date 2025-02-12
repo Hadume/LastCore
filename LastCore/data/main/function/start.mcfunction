@@ -1,4 +1,4 @@
-#> main:start
+#> main:start/
 # ゲームスタート
 # @within tag/function main:start
 
@@ -13,7 +13,7 @@
 
 ## コア
 	### 体力を設定
-		scoreboard players set #Core Global 10
+		scoreboard players operation #Core Global = #Core Const
 		bossbar set lc: max 10
 
 
