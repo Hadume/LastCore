@@ -11,6 +11,7 @@
 	scoreboard objectives add Temp dummy
 	scoreboard objectives add IW.Peremen dummy
 	scoreboard objectives add IW.Player.Storage dummy
+	scoreboard objectives add RespawnTimer dummy
 
 ### Status
 	scoreboard objectives add HP dummy
@@ -19,6 +20,7 @@
 
 #> Constant
 	scoreboard players set #4 Const 4
+	scoreboard players set #20 Const 20
 	scoreboard players set #2000 Const 2000
 	### Gameplay
 		scoreboard players set #Core Const 10
