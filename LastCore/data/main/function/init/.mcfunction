@@ -3,7 +3,7 @@
 # @within function main:load
 
 ## 初期化完了
-	data modify storage lc: Init set value 1b
+#data modify storage lc: Init set value 1b
 
 #> Scoreboard
 	scoreboard objectives add Global dummy
@@ -22,14 +22,6 @@
 #> Bossbar
 	bossbar add lc: ""
 	bossbar set lc: style notched_10
-
-#> Team
-	### Player
-		team add Player
-
-	### Core
-		team add Core
-
 
 ## 位置関係
 	### コア

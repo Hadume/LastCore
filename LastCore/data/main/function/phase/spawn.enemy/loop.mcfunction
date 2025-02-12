@@ -7,7 +7,7 @@
 	execute if score #Phase Temp matches ..0 run return 1
 
 ## スポーン
-	execute positioned as @e[type=marker,tag=Enemy,limit=1,sort=random] summon zombie run function main:phase/spawn.enemy/main
+	execute positioned as @e[type=marker,tag=Enemy,limit=1,sort=random] positioned over world_surface summon zombie run function main:phase/spawn.enemy/main
 
 ## スコアを減らす
 	scoreboard players remove #Phase Temp 1
