@@ -1,6 +1,6 @@
 #> lib:death/player/
 # プレイヤーの死亡時の処理
-# @within function lib:death/
+# @within function lib:death/main
 
 ## ゲームモードを変更
 	gamemode spectator @s

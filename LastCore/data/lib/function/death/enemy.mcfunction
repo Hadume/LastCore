@@ -1,6 +1,6 @@
 #> lib:death/enemy
 # 敵の死亡時の処理
-# @within function lib:death/
+# @within function lib:death/main
 
 ## 消す
 	function main:remove.entity

@@ -46,44 +46,49 @@
 		summon marker 23 0 -7 {Tags:["Enemy"]}
 		summon marker 23 0 23 {Tags:["Enemy"]}
 
-	## Gamerule
-		function main:init/gamerule
 
-	## Storage
-		# Player List
-			function main:init/player_list
+## Gamerule
+	function main:init/gamerule
 
-		# Trigons
-			function main:init/trigonometric_func
-			#Pi
-			data modify storage trfc: pi set value 31415
-			#初期化
-			data modify storage iw: Player.Rotation.X set value 0d
-			data modify storage iw: Player.Rotation.Y set value 0d
-			data modify storage iw: Player.Cos set value 0d
-			data modify storage iw: Player.Sin set value 0d
-			data modify storage iw: Player.FaceTo.X set value 0d
-			data modify storage iw: Player.FaceTo.Y set value 0d
-			data modify storage iw: Player.FaceTo.Z set value 0d
+## Error
+	data modify storage main: Tell.Error set value "§c[Error] §o§n"
+	data modify storage lc: Tell.ArgumentError set value "§c[Error] 引数が足りません: §o§n"
 
-		## Shop
-			scoreboard objectives add IW.Shop.Storage dummy
+## Storage
+	# Player List
+		function main:init/player_list
 
-		## IW Score
-			scoreboard players set #IW.Calc.Postoy.0 IW.Postoy 0
-			scoreboard players set #IW.Calc.Postoy.200 IW.Postoy 200
-			scoreboard players set #IW.Calc.Postoy.10^1 IW.Postoy 10
-			scoreboard players set #IW.Calc.Postoy.10^2 IW.Postoy 100
-			scoreboard players set #IW.Calc.Postoy.10^3 IW.Postoy 1000
-			scoreboard players set #IW.Calc.Postoy.10^4 IW.Postoy 10000
-			scoreboard players set #IW.Calc.Postoy.10^5 IW.Postoy 100000
-			scoreboard players set #IW.Calc.Postoy.10^6 IW.Postoy 1000000
+	# Trigons
+		function main:init/trigonometric_func
+		#Pi
+		data modify storage trfc: pi set value 31415
+		#初期化
+		data modify storage iw: Player.Rotation.X set value 0d
+		data modify storage iw: Player.Rotation.Y set value 0d
+		data modify storage iw: Player.Cos set value 0d
+		data modify storage iw: Player.Sin set value 0d
+		data modify storage iw: Player.FaceTo.X set value 0d
+		data modify storage iw: Player.FaceTo.Y set value 0d
+		data modify storage iw: Player.FaceTo.Z set value 0d
 
-		## Player Storage Num 初期化
-			scoreboard players set #IW.Player.Storage.Num IW.Player.Storage -1
+	## Shop
+		scoreboard objectives add IW.Shop.Storage dummy
 
-		## Item List
-			function main:init/item_list
+	## IW Score
+		scoreboard players set #IW.Calc.Postoy.0 IW.Postoy 0
+		scoreboard players set #IW.Calc.Postoy.200 IW.Postoy 200
+		scoreboard players set #IW.Calc.Postoy.10^1 IW.Postoy 10
+		scoreboard players set #IW.Calc.Postoy.10^2 IW.Postoy 100
+		scoreboard players set #IW.Calc.Postoy.10^3 IW.Postoy 1000
+		scoreboard players set #IW.Calc.Postoy.10^4 IW.Postoy 10000
+		scoreboard players set #IW.Calc.Postoy.10^5 IW.Postoy 100000
+		scoreboard players set #IW.Calc.Postoy.10^6 IW.Postoy 1000000
 
-		## Shop List
-			function main:init/shop_list
+	## Player Storage Num 初期化
+		scoreboard players set #IW.Player.Storage.Num IW.Player.Storage -1
+
+	## Item List
+		function main:init/item_list
+
+	## Shop List
+		function main:init/shop_list
