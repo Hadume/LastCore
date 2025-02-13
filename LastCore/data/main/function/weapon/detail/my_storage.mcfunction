@@ -2,6 +2,9 @@
 #
 # @within function main:weapon/
 
+## Get Damage
+	$execute store result storage iw: Player.List[$(Strg)].Damage.Value int 1 run data get entity @s SelectedItem.components."minecraft:custom_data".IW.Damage
+
 ## Get Pos
 	$data modify storage iw: Player.List[$(Strg)].Pos.X set from entity @s Pos[0]
 	$data modify storage iw: Player.List[$(Strg)].Pos.Y set from entity @s Pos[1]
@@ -18,7 +21,7 @@
 		$execute store result storage iw: Player.List[$(Strg)].ScaledFaceTo.Z double 1 run data get storage iw: Player.List[$(Strg)].FaceTo.Z 1000
 
 	# Left
-		function main:calculate/rotation/y-axis/ with storage iw: Player.Reach.Left
+		function main:calculate/rotation/y-axis/ with storage iw: Player.ReachAngle.Left
 		# Rotate Left
 			$function main:calculate/rotation/y-axis/detail/rotate with storage iw: Player.List[$(Strg)].ScaledFaceTo
 
@@ -29,7 +32,7 @@
 
 
 	# Right
-		function main:calculate/rotation/y-axis/ with storage iw: Player.Reach.Right
+		function main:calculate/rotation/y-axis/ with storage iw: Player.ReachAngle.Right
 		# Rotate
 			$function main:calculate/rotation/y-axis/detail/rotate with storage iw: Player.List[$(Strg)].ScaledFaceTo
 

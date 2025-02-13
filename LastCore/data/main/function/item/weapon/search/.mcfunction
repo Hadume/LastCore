@@ -1,6 +1,6 @@
 #> main:item/weapon/search/
 #
-# @within function main:item/
+# @public
 
 ## Search Item
-	$function main:item/ with storage iwil: Item[$(ID)].ItemData
+	$function main:item/weapon/give with storage iwil: Item.Weapon[$(ID)].ItemData

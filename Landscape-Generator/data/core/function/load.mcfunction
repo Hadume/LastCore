@@ -28,14 +28,19 @@
 # RandMax set value 100
 # Adjust set value 2
 #
+# summon marker ~ ~ ~ {Tags:["LDC.AM.Start"]}
+#
 # @public
 
-kill @e[type=marker]
-scoreboard players reset *
+#kill @e[type=marker]
+#scoreboard players reset *
 
-##Storage
+## Reload
+	execute as @e[type=marker,tag=LDC.AM.Start] run function core:generate/mountain/detail/reset
+
+	##Storage
 data modify storage landscape: Height set value 1500d
-data modify storage landscape: Subdivision set value [70400d,70400d]
+data modify storage landscape: Subdivision set value [17600d,17600d]
 data modify storage landscape: Generalization set value 1000d
 data modify storage landscape: GeneralizedLength set value 2000d
 
@@ -55,10 +60,10 @@ data modify storage landscape: WarpTo.PosY set value 0
 data modify storage landscape: WarpTo.PosZ set value 0
 data modify storage landscape: Mix set value 18
 data modify storage landscape: InsertFromY set value 0
-data modify storage landscape: RepeatingTimesX set value 8
-data modify storage landscape: RepeatingTimesZ set value 8
-data modify storage landscape: RandMin set value -200
-data modify storage landscape: RandMax set value 200
+data modify storage landscape: RepeatingTimesX set value 4
+data modify storage landscape: RepeatingTimesZ set value 4
+data modify storage landscape: RandMin set value -15
+data modify storage landscape: RandMax set value 15
 data modify storage landscape: Adjust set value 2
 data modify storage landscape: Feature.Tree set value 0b
 data modify storage landscape: Feature.TreeRate set value 10
@@ -67,6 +72,7 @@ data modify storage landscape: Feature.SetTree set value "patch_grass"
 data modify storage landscape: Feature.PosX set value 0d
 data modify storage landscape: Feature.PosY set value 0d
 data modify storage landscape: Feature.PosZ set value 0d
+data modify storage landscape: Water.Turn set value 0b
 data modify storage landscape: Water.PosX set value 0d
 data modify storage landscape: Water.PosYAbove set value 0d
 data modify storage landscape: Water.PosYBelow set value 0d

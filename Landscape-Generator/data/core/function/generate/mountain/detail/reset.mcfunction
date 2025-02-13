@@ -59,4 +59,8 @@ scoreboard players set #LDC.Gen.STGL.Z LDC.Peremen 0
 scoreboard players set #LDC.Gen.Pos.Count.X.0 LDC.Peremen 0
 scoreboard players set #LDC.Gen.Pos.Count.Z.0 LDC.Peremen 0
 
+data remove storage landscape: SetBlock.PosX
+data remove storage landscape: SetBlock.PosY
+data remove storage landscape: SetBlock.PosZ
+
 kill @s
