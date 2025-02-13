@@ -11,5 +11,11 @@
 ## 復活までのタイマーを設定
 	scoreboard players set @s RespawnTimer 200
 
+## 伝える
+	tellraw @a [{"text": "\n","color": "red"},{"selector": "@s","bold": true}," が倒された！"]
+
+## 音
+	execute as @a at @s run playsound block.note_block.bass master @s ~ ~ ~ 1.0 1.0 0.0
+
 ## 復活までのタイマー
-	schedule function lib:death/player/respawn_timer/loop 1t
+	function lib:death/player/respawn_timer/loop

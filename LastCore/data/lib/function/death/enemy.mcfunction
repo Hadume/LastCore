@@ -6,7 +6,4 @@
 	function main:remove.entity
 
 ## バーの表示を更新
-	execute if entity @e[tag=Enemy,scores={HP=1..}] run return run function #api:core.bar
-
-## フェーズを進めるか確認
-	execute unless entity @e[tag=Enemy,scores={HP=1..}] run function main:phase/start
+	function #api:core.bar

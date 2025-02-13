@@ -4,3 +4,6 @@
 
 ## 初期化
 	execute unless data storage lc: {Init:1b} run function main:init/
+
+## ゲームを終了させる
+	function #main:reset
