@@ -212,10 +212,12 @@ execute if score #LDC.Gen.Pos.Count.X.0 LDC.Peremen < #LDC.Gen.Mix.X.1 LDC.Perem
 execute if score #LDC.Gen.Pos.Count.X.0 LDC.Peremen < #LDC.Gen.Mix.X.1 LDC.Peremen if score #LDC.Gen.Pos.Count.Z.0 LDC.Peremen < #LDC.Gen.Mix.Z.1 LDC.Peremen run function core:generate/mountain/detail/fill with storage landscape: Fill
 
 #Water
-execute if score #LDC.Gen.Water.Pos.Y.1 LDC.Peremen matches ..0 if score #LDC.Gen.Pos.Count.X.0 LDC.Peremen < #LDC.Gen.Mix.X.1 LDC.Peremen if score #LDC.Gen.Pos.Count.Z.0 LDC.Peremen < #LDC.Gen.Mix.Z.1 LDC.Peremen run function core:generate/mountain/detail/water with storage landscape: Water
+execute if data storage landscape: {Water:{Turn:1b}} if score #LDC.Gen.Water.Pos.Y.1 LDC.Peremen matches ..0 if score #LDC.Gen.Pos.Count.X.0 LDC.Peremen < #LDC.Gen.Mix.X.1 LDC.Peremen if score #LDC.Gen.Pos.Count.Z.0 LDC.Peremen < #LDC.Gen.Mix.Z.1 LDC.Peremen run function core:generate/mountain/detail/water with storage landscape: Water
 
 #Trees
-execute if score #LDC.Gen.Feature.Tree.Pos.Y.0 LDC.Peremen matches 1.. if score #LDC.Gen.Feature.Tree.Place LDC.Peremen <= #LDC.Gen.Feature.Tree.Rate LDC.Peremen if score #LDC.Gen.Pos.Count.X.0 LDC.Peremen < #LDC.Gen.Mix.X.1 LDC.Peremen if score #LDC.Gen.Pos.Count.Z.0 LDC.Peremen < #LDC.Gen.Mix.Z.1 LDC.Peremen run function core:generate/mountain/detail/trees with storage landscape: Feature
+execute if data storage landscape: {Water:{Turn:1b}} if score #LDC.Gen.Feature.Tree.Pos.Y.0 LDC.Peremen matches 1.. if score #LDC.Gen.Feature.Tree.Place LDC.Peremen <= #LDC.Gen.Feature.Tree.Rate LDC.Peremen if score #LDC.Gen.Pos.Count.X.0 LDC.Peremen < #LDC.Gen.Mix.X.1 LDC.Peremen if score #LDC.Gen.Pos.Count.Z.0 LDC.Peremen < #LDC.Gen.Mix.Z.1 LDC.Peremen run function core:generate/mountain/detail/trees with storage landscape: Feature
+execute if data storage landscape: {Water:{Turn:0b}} if score #LDC.Gen.Feature.Tree.Place LDC.Peremen <= #LDC.Gen.Feature.Tree.Rate LDC.Peremen if score #LDC.Gen.Pos.Count.X.0 LDC.Peremen < #LDC.Gen.Mix.X.1 LDC.Peremen if score #LDC.Gen.Pos.Count.Z.0 LDC.Peremen < #LDC.Gen.Mix.Z.1 LDC.Peremen run function core:generate/mountain/detail/trees with storage landscape: Feature
+
 
 
 #End (Fake)
