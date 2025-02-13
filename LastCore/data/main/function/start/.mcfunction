@@ -14,15 +14,12 @@
 ## プレイヤーを初期化
 	execute as @a at @s run function player:start
 
-## コア
-	### 体力を設定
-		scoreboard players operation #Core Global = #Core Const
-		bossbar set lc: max 10
+## コアの体力を設定
+	scoreboard players operation #Core Global = #Core Const
+	bossbar set lc: max 10
 
+## フェーズ設定
+	scoreboard players set #Phase Global 0
 
-## フェーズ
-	### 設定
-		scoreboard players set #Phase Global 0
-
-	### スタート
-		function main:phase/start
+## 次
+	schedule function main:start/3 1s

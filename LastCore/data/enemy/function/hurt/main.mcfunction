@@ -10,3 +10,6 @@
 
 ## 体力の更新
 	function #lib:status/hp/update
+
+## フェーズを進める
+	execute unless entity @e[tag=Enemy,scores={HP=1..}] run function main:phase/clear

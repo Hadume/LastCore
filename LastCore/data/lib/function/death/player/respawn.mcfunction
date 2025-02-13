@@ -17,3 +17,9 @@
 
 ## アクションバーを更新
 	title @s actionbar ""
+
+## 伝える
+	tellraw @a [{"text": "\n","color": "green"},{"selector": "@s","bold": true}," が復活した！"]
+
+## 音
+	execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1.0 1.0 0.0

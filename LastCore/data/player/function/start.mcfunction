@@ -8,9 +8,6 @@
 ## ステータス
 	scoreboard players operation @s HP = @s HP.Max
 
-## ボスバーを表示
-	bossbar set lc: players @s
-
 ## Effect
 	### すべて消す
 		effect clear @s
@@ -24,3 +21,6 @@
 
 ## アイテムを渡す
 	loot give @s loot player:sword
+
+## 音
+	playsound ui.toast.in master @s ~ ~ ~ 0.5 1.0 0.0

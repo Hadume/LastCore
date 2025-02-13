@@ -7,6 +7,9 @@
 
 ## 敵の数を取得
 	execute store result score #Enemy Temp if entity @e[type=#main:living,tag=Enemy]
+	### 敵がいたら、表示されるように
+		execute if score #Enemy Temp matches 1.. run data modify storage lc:tmp Bar.Enemies set value '[{"text": "エネミー: "}, {"score": {"name": "#Enemy", "objective": "Temp"},"bold": true}]'
+
 
 ## 割合によって、色を変える
 	### 割合を計算
@@ -19,8 +22,11 @@
 	execute if score #Core Temp matches 0..200 unless data storage lc: {Bar:{Process:["Red"]}} run function api:core.bar/red
 
 ## 名前を更新
-	bossbar set lc: name [{"storage": "lc:","nbt": "Bar.Color","interpret": true},{"text": "フェーズ: ","color": "white"}, {"score": {"name": "#Phase", "objective": "Global"},"color": "white","bold": true},"  ",{"text": "エネミー: ","color": "white"}, {"score": {"name": "#Enemy", "objective": "Temp"},"color": "white","bold": true},"  ",{"text": "コア: ","color": "white"}, {"score": {"name": "#Core", "objective": "Global"},"bold": true}]
+	bossbar set lc: name [{"storage": "lc:","nbt": "Bar.Color","interpret": true},{"text": "フェーズ: ","color": "white"}, {"score": {"name": "#Phase", "objective": "Global"},"color": "white","bold": true},"  ",{"storage": "lc:tmp","nbt": "Bar.Enemies","interpret": true,"color": "white"},"  ",{"text": "コア: ","color": "white"}, {"score": {"name": "#Core", "objective": "Global"},"bold": true}]
 
 ## 一時使用ScoreHolderをリセット
 	scoreboard players reset #Enemy Temp
 	scoreboard players reset #Core Temp
+
+## 一時使用Storageを削除
+	data remove storage lc:tmp Bar

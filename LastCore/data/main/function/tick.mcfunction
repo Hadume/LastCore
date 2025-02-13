@@ -3,7 +3,7 @@
 # @within tag/function tick
 
 ## プレイヤーで常時実行
-	execute as @a at @s run function player:tick
+	execute as @a at @s run function player:tick/
 
 ## 敵で常時実行
 	execute as @e[tag=Enemy] at @s run function enemy:tick
