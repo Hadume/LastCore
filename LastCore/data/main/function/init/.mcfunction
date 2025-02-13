@@ -15,6 +15,7 @@
 	scoreboard objectives add IW.Enemy.Pos.X.0 dummy
 	scoreboard objectives add IW.Enemy.Pos.Y.0 dummy
 	scoreboard objectives add IW.Enemy.Pos.Z.0 dummy
+	scoreboard objectives add IW.Shop.Money dummy
 
 ### Status
 	scoreboard objectives add HP dummy
@@ -34,11 +35,10 @@
 	### Core
 		team add Core
 
+	## Gamerule
+		function main:init/gamerule
 
-## Gamerule
-	function main:init/gamerule
-
-## Storage
+	## Storage
 	# Player List
 		function main:init/player_list
 
@@ -55,19 +55,24 @@
 		data modify storage iw: Player.FaceTo.Y set value 0d
 		data modify storage iw: Player.FaceTo.Z set value 0d
 
+	## Shop
+		scoreboard objectives add IW.Shop.Storage dummy
 
-## IW Score
-	scoreboard players set #IW.Calc.Postoy.0 IW.Postoy 0
-	scoreboard players set #IW.Calc.Postoy.200 IW.Postoy 200
-	scoreboard players set #IW.Calc.Postoy.10^1 IW.Postoy 10
-	scoreboard players set #IW.Calc.Postoy.10^2 IW.Postoy 100
-	scoreboard players set #IW.Calc.Postoy.10^3 IW.Postoy 1000
-	scoreboard players set #IW.Calc.Postoy.10^4 IW.Postoy 10000
-	scoreboard players set #IW.Calc.Postoy.10^5 IW.Postoy 100000
-	scoreboard players set #IW.Calc.Postoy.10^6 IW.Postoy 1000000
+	## IW Score
+		scoreboard players set #IW.Calc.Postoy.0 IW.Postoy 0
+		scoreboard players set #IW.Calc.Postoy.200 IW.Postoy 200
+		scoreboard players set #IW.Calc.Postoy.10^1 IW.Postoy 10
+		scoreboard players set #IW.Calc.Postoy.10^2 IW.Postoy 100
+		scoreboard players set #IW.Calc.Postoy.10^3 IW.Postoy 1000
+		scoreboard players set #IW.Calc.Postoy.10^4 IW.Postoy 10000
+		scoreboard players set #IW.Calc.Postoy.10^5 IW.Postoy 100000
+		scoreboard players set #IW.Calc.Postoy.10^6 IW.Postoy 1000000
 
-## Player Storage Num 初期化
-	scoreboard players set #IW.Player.Storage.Num IW.Player.Storage -1
+	## Player Storage Num 初期化
+		scoreboard players set #IW.Player.Storage.Num IW.Player.Storage -1
 
-## Item List
-	function main:init/item_list
+	## Item List
+		function main:init/item_list
+
+	## Shop List
+		function main:init/shop_list

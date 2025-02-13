@@ -21,7 +21,7 @@
 	execute as @e[type=!player,type=!armor_stand,type=!interaction,distance=..32] run function main:calculate/inverse_matrix/ with storage iw: Player
 
 ## Deal damage to enemies in range
-	execute as @e[type=!player,type=!armor_stand,type=!interaction,distance=..32] at @s if score @s IW.Enemy.Pos.X.0 matches -1..100 if score @s IW.Enemy.Pos.Y.0 matches -1..100 if score @s IW.Enemy.Pos.Z.0 matches -500..500 run function main:weapon/attack/normal/detail/damage with storage iw: Player
+	execute as @e[type=!player,type=!armor_stand,type=!interaction,distance=..32] at @s if score @s IW.Enemy.Pos.X.0 matches -1..150 if score @s IW.Enemy.Pos.Y.0 matches -1..150 if score @s IW.Enemy.Pos.Z.0 matches -500..500 run function main:weapon/attack/normal/detail/damage with storage iw: Player
 
 ## Remove data from interaction
 	data remove entity @e[type=interaction,tag=IW.Interaction,distance=..1,sort=nearest,limit=1] attack
