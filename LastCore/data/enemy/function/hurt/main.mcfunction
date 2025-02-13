@@ -3,13 +3,10 @@
 # @within function enemy:hurt/
 
 ## 体力を減らす
-	scoreboard players remove @s HP 1
+	scoreboard players operation @s HP -= #ATK Temp
 
 ## ターゲットをプレイヤーに向ける
-	execute on passengers if entity @s[tag=Target] run data modify entity @s AngryAt set from entity @a[tag=This,limit=1] UUID
+	execute on passengers if entity @s[tag=Target] run data modify entity @s AngryAt set from storage lc:tmp Target
 
 ## 体力の更新
 	function #lib:status/hp/update
-
-## フェーズを進める
-	execute unless entity @e[tag=Enemy,scores={HP=1..}] run function main:phase/clear

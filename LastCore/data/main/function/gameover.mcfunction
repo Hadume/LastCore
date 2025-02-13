@@ -3,7 +3,7 @@
 # @within function main:core/damage
 
 ## ゲームをリセットする
-	function main:reset
+	function #main:reset
 
 ## タイトル表示
 	title @a clear
