@@ -14,4 +14,4 @@
 	scoreboard players reset #Rand Temp
 
 ## 一時使用Storageを削除
-	execute if data storage asset:temp Enemies run data remove storage asset:temp Enemies
+	execute if data storage asset:tmp Enemies run data remove storage asset:tmp Enemies

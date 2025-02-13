@@ -3,7 +3,7 @@
 # @within function asset.lib:map/spawn.enemy/main/
 
 ## 敵のID
-	$data modify storage asset:enemy ID set from storage asset:temp Enemies[$(Num)].ID
+	$data modify storage asset:enemy ID set from storage asset:tmp Enemies[$(Num)].ID
 
 ##
 	execute positioned as @e[type=marker,tag=Enemy,limit=1,sort=random] positioned over world_surface run function #asset:enemy/
