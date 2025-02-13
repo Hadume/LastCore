@@ -2,6 +2,9 @@
 # ゲームスタート
 # @within tag/function main:start
 
+## とりあえず、マップデータを設定
+	data modify storage asset:map ID set value 1001
+
 ## ゲームリセット
 	function main:reset
 
