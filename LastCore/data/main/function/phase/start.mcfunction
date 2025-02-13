@@ -12,7 +12,7 @@
 	function main:phase/spawn.enemy/loop
 
 ## バーの表示を更新
-	function main:core/display
+	function #api:core.bar
 
 ## 一時使用ScoreHolderをリセット
 	scoreboard players reset #Phase Temp
