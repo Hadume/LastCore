@@ -21,6 +21,7 @@
 #> Constant
 	scoreboard players set #4 Const 4
 	scoreboard players set #20 Const 20
+	scoreboard players set #1000 Const 1000
 	scoreboard players set #2000 Const 2000
 	### Gameplay
 		scoreboard players set #Core Const 10

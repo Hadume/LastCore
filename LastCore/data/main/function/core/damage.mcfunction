@@ -9,4 +9,4 @@
 	execute if score #Core Global matches ..0 run return run function main:reset
 
 ## バーを更新
-	function main:core/display
+	function #api:core.bar

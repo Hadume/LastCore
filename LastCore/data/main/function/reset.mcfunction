@@ -10,8 +10,13 @@
 ## フェーズリセット
 	scoreboard players reset #Phase Global
 
-## ボスバーを隠す
-	bossbar set lc: players
+## バー
+	### 隠す
+		bossbar set lc: players
+
+	### 色をリセット
+		data remove storage lc: Bar
+
 
 ## プレイヤーをリセット
 	execute as @a run function player:reset

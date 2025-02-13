@@ -1,6 +1,10 @@
-#> main:phase/spawn.enemy/main
+#> asset.lib:enemy/spawn/
 # 敵を召喚
-# @within function main:phase/spawn.enemy/loop
+# @within tag/function asset.lib:enemy/spawn
+
+## tagを追加
+	tag @s add Enemy
+	tag @s add LC
 
 ## 属性
 	attribute @s max_health base set 2048.0
@@ -10,7 +14,7 @@
 	data merge entity @s {Health:2048.0f,PersistenceRequired:1b,HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}
 
 ## 燃えないように
-	item replace entity @s armor.head with stone_button
+	execute unless items entity @s armor.head * run item replace entity @s armor.head with stone_button
 
 ## 敵対状態の設定
 	### わんこ
@@ -25,8 +29,4 @@
 
 
 ## ステータス
-	scoreboard players set @s HP 2
-
-## タグを付与
-	tag @s add Enemy
-	tag @s add LC
+	execute store result score @s HP.Max store result score @s HP run data get storage asset:enemy Status.HP
