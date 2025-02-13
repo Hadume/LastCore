@@ -10,6 +10,8 @@
 
 ## ステータス : int
 	data modify storage asset:enemy Status.HP set value 2
+	data modify storage asset:enemy Status.ATK set value 1
+	data modify storage asset:enemy Status.Speed set value 231
 
 ## NBT? : Compound
 #data modify storage asset:enemy NBT set value {}

@@ -18,7 +18,7 @@
 
 ## 敵対状態の設定
 	### わんこ
-		summon wolf ~ ~ ~ {Invulnerable:1b,Silent:1b,Age:-2147483647,AngerTime:2147483647,attributes:[{id:"scale",base:0.0625d}],active_effects:[{id:"invisibility",amplifier:0b,duration:-1,show_particles:0b}],Tags:["Target","LC","Init"]}
+		summon wolf ~ ~ ~ {Invulnerable:1b,Silent:1b,Age:-2147483647,AngerTime:2147483647,attributes:[{id:"scale",base:0.0625d},{id:"attack_damage",base:0.0625d}],active_effects:[{id:"invisibility",amplifier:0b,duration:-1,show_particles:0b}],Tags:["Target","LC","Init"]}
 		ride @e[type=wolf,tag=Init,limit=1] mount @s
 
 	### 敵対状態に
@@ -29,4 +29,19 @@
 
 
 ## ステータス
-	execute store result score @s HP.Max store result score @s HP run data get storage asset:enemy Status.HP
+	### HP
+		execute store result score #HP Temp run data get storage asset:enemy Status.HP
+		scoreboard players operation #HP Temp *= #Multiple Temp
+		scoreboard players operation #HP Temp /= #10 Const
+		scoreboard players operation @s HP = #HP Temp
+		scoreboard players operation @s HP.Max = #HP Temp
+
+	### ATK
+		execute store result score #ATK Temp run data get storage asset:enemy Status.ATK
+		scoreboard players operation #ATK Temp *= #Multiple Temp
+		scoreboard players operation #ATK Temp /= #10 Const
+		scoreboard players operation @s ATK = #ATK Temp
+
+	### Speed
+		execute store result score @s Speed run data get storage asset:enemy Status.Speed
+		function #lib:status/speed/update
