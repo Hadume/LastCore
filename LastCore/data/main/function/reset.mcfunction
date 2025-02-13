@@ -1,11 +1,9 @@
 #> main:reset
 # ゲームリセット
-# @within
-#   function main:start
-#   tag/function main:reset
+# @within tag/function main:reset
 
 ## オブジェクトを消す
-	execute as @e[tag=LC] at @s run function main:remove.entity
+	execute as @e[tag=LC] at @s run function #api:remove.entity
 
 ## 各スコアをリセット
 	scoreboard players reset #Phase Global

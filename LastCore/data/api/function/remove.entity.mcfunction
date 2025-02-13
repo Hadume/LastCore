@@ -1,10 +1,9 @@
-#> main:remove.entity
+#> api:remove.entity
 # Entityを消す
-# @within function main:reset/
-# @private
+# @within tag/function api:remove.entity
 
 ## 乗っているEntityでも
-	execute on passengers at @s run function main:remove.entity
+	execute on passengers at @s run function #api:remove.entity
 
 ## 下ろす
 	ride @s dismount
